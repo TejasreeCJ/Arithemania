@@ -5,6 +5,21 @@ import './TigerReserveDashboard.css';
 import { MapContainer, TileLayer, Polygon, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
+// Import reserve images
+import bandipurImg from './assets/bandipur.jpeg';
+import periyarImg from './assets/periyar.jpeg';
+import nsrImg from './assets/nsr.jpeg';
+import kmtImg from './assets/kmt.jpeg';
+import bhadraImg from './assets/bhadra.jpeg';
+import anamalaiImg from './assets/anamalai.jpeg';
+import kaliImg from './assets/kali.jpeg';
+import mudumalaiImg from './assets/mudumalai.jpeg';
+import nagarholeImg from './assets/nagarhole.jpeg';
+import parambikulamImg from './assets/parambikulam.jpeg';
+import brtImg from './assets/brt.jpeg';
+import kawalImg from './assets/kawal.jpeg';
+import satyamangalamImg from './assets/sathyamangalam.jpeg';
+
 const TigerReserveDashboard = () => {
   const [activeReserve, setActiveReserve] = useState('Bandipur');
   const [showSidePanel, setShowSidePanel] = useState(true);
@@ -13,11 +28,10 @@ const TigerReserveDashboard = () => {
 
   // Complete tiger reserve data with all provided information
   const reserves = [
-    // ... (your reserves data)
     {
       id: 1,
       name: 'Bandipur',
-      image: '/api/placeholder/80/80',
+      image: bandipurImg,
       region: 'Karnataka',
       coreArea: 872.24,
       bufferArea: 1155.57,
@@ -32,7 +46,7 @@ const TigerReserveDashboard = () => {
     {
       id: 2,
       name: 'Periyar',
-      image: '/api/placeholder/80/80',
+      image: periyarImg,
       region: 'Kerala',
       coreArea: 881,
       bufferArea: 148,
@@ -47,7 +61,7 @@ const TigerReserveDashboard = () => {
     {
       id: 3,
       name: 'Nagarjunsagar-Srisailam',
-      image: '/api/placeholder/80/80',
+      image: nsrImg,
       region: 'Andhra Pradesh/Telangana',
       coreArea: 2444,
       bufferArea: 1160,
@@ -62,7 +76,7 @@ const TigerReserveDashboard = () => {
     {
       id: 4,
       name: 'Kalakad Mundanthurai',
-      image: '/api/placeholder/80/80',
+      image: kmtImg,
       region: 'Tamil Nadu',
       coreArea: 895,
       bufferArea: 706.542,
@@ -77,7 +91,7 @@ const TigerReserveDashboard = () => {
     {
       id: 5,
       name: 'Bhadra',
-      image: '/api/placeholder/80/80',
+      image: bhadraImg,
       region: 'Karnataka',
       coreArea: 492.46,
       bufferArea: 155.67,
@@ -92,7 +106,7 @@ const TigerReserveDashboard = () => {
     {
       id: 6,
       name: 'Anamalai',
-      image: '/api/placeholder/80/80',
+      image: anamalaiImg,
       region: 'Tamil Nadu',
       coreArea: 958,
       bufferArea: 521,
@@ -107,7 +121,7 @@ const TigerReserveDashboard = () => {
     {
       id: 7,
       name: 'Kali',
-      image: '/api/placeholder/80/80',
+      image: kaliImg,
       region: 'Karnataka',
       coreArea: 1220.18,
       bufferArea: 1474.62,
@@ -122,7 +136,7 @@ const TigerReserveDashboard = () => {
     {
       id: 8,
       name: 'Mudumalai',
-      image: '/api/placeholder/80/80',
+      image: mudumalaiImg,
       region: 'Tamil Nadu',
       coreArea: 321,
       bufferArea: 367.59,
@@ -137,7 +151,7 @@ const TigerReserveDashboard = () => {
     {
       id: 9,
       name: 'Nagarhole',
-      image: '/api/placeholder/80/80',
+      image: nagarholeImg,
       region: 'Karnataka',
       coreArea: 643.35,
       bufferArea: 562.41,
@@ -152,7 +166,7 @@ const TigerReserveDashboard = () => {
     {
       id: 10,
       name: 'Parambikulam',
-      image: '/api/placeholder/80/80',
+      image: parambikulamImg,
       region: 'Kerala',
       coreArea: 390.89,
       bufferArea: 252.77,
@@ -167,7 +181,7 @@ const TigerReserveDashboard = () => {
     {
       id: 11,
       name: 'Biligiri Ranganatha Temple',
-      image: '/api/placeholder/80/80',
+      image: brtImg,
       region: 'Karnataka',
       coreArea: 359.1,
       bufferArea: 215.72,
@@ -182,7 +196,7 @@ const TigerReserveDashboard = () => {
     {
       id: 12,
       name: 'Kawal',
-      image: '/api/placeholder/80/80',
+      image: kawalImg,
       region: 'Telangana',
       coreArea: 892.23,
       bufferArea: 123.12,
@@ -197,7 +211,7 @@ const TigerReserveDashboard = () => {
     {
       id: 13,
       name: 'Sathyamangalam',
-      image: '/api/placeholder/80/80',
+      image: satyamangalamImg,
       region: 'Tamil Nadu',
       coreArea: 793.493,
       bufferArea: 614.912,
