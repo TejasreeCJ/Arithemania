@@ -546,7 +546,17 @@ const TigerReserveDashboard = () => {
                   style={{ height: '100%', width: '100%' }}
                 >
                   <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                  <Polygon positions={reservePolygon} color="red" />
+                  <Polygon 
+  positions={reservePolygon} 
+  color="red" 
+  eventHandlers={{
+    click: () => window.open(
+      `https://arithmania.vercel.app?lat=${(activeReserveInfo.latMin + activeReserveInfo.latMax) / 2}&lon=${(activeReserveInfo.lonMin + activeReserveInfo.lonMax) / 2}&name=${encodeURIComponent(activeReserveInfo.name)}`
+    )
+  }}
+  style={{ cursor: 'pointer' }}
+/>
+
                   <MapZoom center={[
                     (activeReserveInfo.latMin + activeReserveInfo.latMax) / 2,
                     (activeReserveInfo.lonMin + activeReserveInfo.lonMax) / 2,
