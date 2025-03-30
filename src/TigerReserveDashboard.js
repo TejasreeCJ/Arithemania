@@ -662,7 +662,7 @@ const TigerReserveDashboard = () => {
 
               {/* Ecological insights */}
               <div className="insight-card">
-                <h4 className="insight-title">Analysis</h4>
+                <h4 className="insight-title">Notes</h4>
                 <ul className="insight-list">
                   {reserveInsights.insights.map((insight, index) => (
                     <li key={index} className="insight-item">
